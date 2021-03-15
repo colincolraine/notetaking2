@@ -8,7 +8,11 @@ const PORT = process.env.PORT || 4000
 const noteRoutes = require('./notes/routes')
 const userRoutes = require('./users/routes')
 
-mongoose.connect('mongodb+srv://admin:Claretjug1@notetaking2.7q2bv.mongodb.net/notetaking2?retryWrites=true&w=majority', {useNewUrlParser: true, useUnifiedTopology: true})
+const { username, password } = process.env
+
+console.log(username, password)
+
+mongoose.connect(`mongodb+srv://${username}:${password}@notetaking2.7q2bv.mongodb.net/notetaking2?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
