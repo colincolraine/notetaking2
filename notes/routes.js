@@ -19,7 +19,7 @@ router.get('/',
         console.log(err)
         res
         .status(500)
-        .send('Error happened')
+        .send('Error 7 happened')
     })
 })
 //get single
@@ -38,7 +38,7 @@ router.get('/:id', (req, res, next)=>{
         console.log(err)
         res
         .status(500)
-        .send('Error happened')
+        .send('Error 8 happened')
     })
 })
 
@@ -65,7 +65,7 @@ inputValidation,
         })
         .catch((err)=>{
             console.log(err)
-            res.send('error happened')
+            res.send('Error 9 happened')
         })
 })
 
@@ -92,7 +92,7 @@ isAuthor,
         console.log(err)
         res
         .status(500)
-        .send('Error happened')
+        .send('Error 10 happened')
     })
 })
 
@@ -116,7 +116,7 @@ isAuthor,
         console.log(err)
         res
         .status(500)
-        .send('Error happened')
+        .send('Error 11 happened')
     })
 })
 
@@ -168,7 +168,7 @@ function findNote(req, res, next) {
             console.log(err)
             res
                 .status(500)
-                .send('Error Happened')
+                .send('Error 12 happened')
         })
 }
  function isAuthor(req, res,next){

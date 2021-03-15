@@ -36,7 +36,7 @@ hashPassword,
         })
         .catch((err)=>{
             console.log(err)
-            res.send('error happened')
+            res.send('Error 1 happened')
         })
 })
 
@@ -55,7 +55,7 @@ router.get('/:id', (req, res, next)=>{
     })
     .catch((err)=>{
         console.log(err)
-        res.status(500).send('Error happened')
+        res.status(500).send('Error 2 happened')
     })
 })
 
@@ -98,7 +98,7 @@ function isEmailRegistered(req, res, next){
         })
         .catch((err)=>{
             console.log(err)
-            res.status(500).send('Error happened')
+            res.status(500).send('Error 3 happened')
         })
 }
 
@@ -153,7 +153,7 @@ function findUser(req, res, next){
         console.log(err)
         res
             .status(500)
-            .send('Error happened')
+            .send('Error 4 happened')
     })
 }
 
@@ -163,7 +163,7 @@ function checkPassword(req, res, next){
     bcrypt.compare(password, hashPassword, function(err, isPasswordCorrect) {
         if(err){
             console.log(err)
-            res.status(500).send('Error happened')
+            res.status(500).send('Error 5 happened')
         }else if(isPasswordCorrect){
             next()
         }else{
@@ -190,7 +190,7 @@ function giveAccess(req, res, next){
             console.log(err)
             res
                 .status(500)
-                .send('Error happened')
+                .send('Error 6 happened')
         })
     }
 
