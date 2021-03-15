@@ -10,6 +10,9 @@ const userRoutes = require('./users/routes')
 
 const { username, password } = process.env
 
+console.log(username)
+console.log(username)
+
 mongoose.connect(`mongodb+srv://${username}:${password}@notetaking2.7q2bv.mongodb.net/notetaking2?retryWrites=true&w=majority`, {useNewUrlParser: true, useUnifiedTopology: true})
 
 app.use(bodyParser.json())
