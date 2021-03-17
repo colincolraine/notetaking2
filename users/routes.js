@@ -18,7 +18,7 @@ hashPassword,
 (req, res, next)=>{
     console.log(req.body.password)
     const newUser = new UserModel({
-        firstName: 'Derek',//req.body.firstName,
+        firstName: 'John',//req.body.firstName,
         lastName: req.body.lastName,
         email: req.body.email,
         password: req.body.password
