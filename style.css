@@ -1,0 +1,80 @@
+.box {
+    width: 100%;
+    border: 2px dashed;
+    height: 422px;
+    overflow-x: scroll;
+    scroll-behavior: smooth; /* <--- */
+  }
+  
+  #boxChild {
+    /* margin: 600px 0 300px; */
+    margin: 0 0 2px;
+    width: 200%;
+    height: 40px;
+    background: green;
+    display: inline-block;
+  }
+
+  .foo {
+    width: 20%;
+    height: 60px;
+    margin: 0px;
+    border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.fool {
+  width: 20%;
+  height: 60px;
+  margin: 0px;
+  border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.foop {
+  width: 20%;
+  height: 60px;
+  margin: 0px;
+  border: 1px solid rgba(0, 0, 0, .2);
+  display: inline-flex;
+}
+
+.fool:hover {
+  background-color: yellow;
+}
+
+.container-fluid {
+  height: 200px;
+  background-color: white;
+}
+
+.navbar-brand {
+  font-size: 33px;
+  height: 50%;
+  width: 27%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/*.navbar-brand>img {
+  position: absolute;
+  top: 50%;
+  left: 33%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: black;
+}*/
+
+/*.logo-heading{
+  position: absolute;
+  top: 50%;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  color: black;
+}*/
+
+img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}

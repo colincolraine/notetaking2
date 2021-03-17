@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <div style= "position: fixed; top: 0%; bottom:70%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
+                <div style= "position: fixed; top: 0%; bottom:80%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
+                  <img src="Image 09-03-2021 at 13.18.jpeg" alt="Smiley face">
+                </div>
+                <div style= "position: fixed; top: 20%; bottom:50%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
+                  <ul>
+                    <h2>4 simple steps</h2>
+                    <li>Sign In or Create Account</li>
+                    <li>Select Classes from table below</li>
+                    <li>Go to Checkout</li>
+                    <li>Receive confirmation email with link to Online Tuition</li>
+                  </ul>
+                </div>
+        </div>
+    <div class="register">
+        <h2 class="register__title">Your Details</h2>
+
+        <form id="register-form" action="https://www.lse.co.uk/register.html" method="post">
+
+            
+
+            <label class="register__label register__label--title register__label--margin-right">
+                Title:
+                <select class="register__select" name="selTitle">
+                    <option value="">-- Select --</option>
+                    <option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Miss">Miss</option><option value="Ms">Ms</option>
+                </select>
+            </label>
+
+            <label class="register__label register__label--name register__label--margin-right">
+                First Name:
+                <input type="text" name="txtFirstName" value="" class="register__input pasteable" autocomplete="off">
+            </label>
+
+            <label class="register__label register__label--name">
+                Last Name:
+                <input type="text" name="txtLastName" value="" class="register__input pasteable" autocomplete="off">
+            </label>
+
+            
+
+            <label class="register__label register__label--email register__label--margin-right">
+                Email Address:
+                <input type="email" name="txtEmail" value="" class="register__input pasteable">
+            </label>
+
+            <label class="register__label register__label--email">
+                Confirm Email Address:
+                <input type="email" name="txtConfirmEmail" value="" class="register__input pasteable">
+            </label>
+
+            <label class="register__label register__label--details register__label--margin-right">
+                Username (visible to everyone):
+                <input id="username" type="text" name="txtUserName" value="" class="register__input pasteable" maxlength="16" autocomplete="off">
+                <span id="username-available" class="register__username-status register__username-status--available" style="display:none;">
+                    Available
+                </span>
+                <span id="username-taken" class="register__username-status register__username-status--taken" style="display:none;">
+                    Unavailable
+                </span>
+                <span id="username-checking" class="register__username-status" style="display:none;">
+                    Checking Availability <i class="fa fa-circle-o-notch fa-spin"></i>
+                </span>
+                <span id="username-invalid" class="register__username-status register__username-status--taken" style="display:none;">
+                    Invalid
+                </span>
+            </label>
+            
+
+            
+
+            <label class="register__label register__label--details">
+                Password
+                <input type="password" name="txtPassword" value="" class="register__input" autocomplete="new-password">
+            </label>
+
+            <div class="register__title">Marketing</div>
+            
+            
+            <div style="visibility:hidden;pointer-events:none;width:0;height:0;position:absolute;top:-9999px;left:-9999px;z-index:-1;" tabindex="-1">
+            <input id="agreed_to_1st_party_emails" type="text" name="agreed_to_1st_party_emails" value="false" autocomplete="off">
+            </div>
+
+            <label class="register__label">
+                
+                <input id="agreed_to_1st_party_emails_checkbox" type="checkbox" name="chkLSEEmails" value="Y" class="register__checkbox">
+                I would like to receive occasional emails from London South East.
+            </label>
+            
+            
+            <div style="visibility:hidden;pointer-events:none;width:0;height:0;position:absolute;top:-9999px;left:-9999px;z-index:-1;" tabindex="-1">
+            <input id="agreed_to_3rd_party_emails" type="text" name="agreed_to_3rd_party_emails" value="false" autocomplete="off">
+            </div>
+
+            <label class="register__label">
+                <input id="agreed_to_3rd_party_emails_checkbox" type="checkbox" name="chkThirdPartyEmails" value="Y" class="register__checkbox">
+                I would like to receive occasional emails from selected third parties.
+            </label>
+
+            <div class="register__title">Newsletter</div>
+
+            <label class="register__label">
+                <input type="checkbox" name="chkMarketReport" value="Y" class="register__checkbox">
+                I would like to receive the <strong>free</strong> market report and week ahead newsletters.
+            </label>
+
+            <script>
+                $(function() {
+                    $('#agreed_to_1st_party_emails_checkbox').on('change', function() { if($(this).is(':checked')) { $('#agreed_to_1st_party_emails').val('true'); } else { $('#agreed_to_1st_party_emails').val('false'); } });
+
+                    $('#agreed_to_3rd_party_emails_checkbox').on('change', function() { if($(this).is(':checked')) { $('#agreed_to_3rd_party_emails').val('true'); } else { $('#agreed_to_1st_party_emails').val('false'); } });
+                });
+            </script>
+
+            <div class="register__title">Terms</div>
+            
+
+            <label class="register__label">
+                <input type="checkbox" name="chkTerms" value="Y" class="register__checkbox">
+                I have read and agree to the <a href="https://www.lse.co.uk/terms-and-conditions.html" class="register__link">Terms and Conditions</a>, and am over 16 years of age.
+            </label>
+
+            <input type="hidden" name="txtFormType" value="REGISTER">
+
+            <div id="register_recapcha"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6Le99S8UAAAAAKWAhpw2P0j2aYbSWECFr0dAz0rM&amp;co=aHR0cHM6Ly93d3cubHNlLmNvLnVrOjQ0Mw..&amp;hl=en&amp;v=4eHYAlZEVyrAlR9UNnRUmNcL&amp;size=normal&amp;cb=whwh9d9mrhcc" width="304" height="78" role="presentation" name="a-8uevxdlmd134" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div><iframe style="display: none;"></iframe></div><br clear="all"><br clear="all">
+
+            <input type="submit" class="register__button" data-sitekey="6Le99S8UAAAAAKWAhpw2P0j2aYbSWECFr0dAz0rM" data-callback="onSubmit" value="Register FREE">
+        </form>
+    </div>
+</body>
+</html>
