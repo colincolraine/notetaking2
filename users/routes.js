@@ -31,7 +31,7 @@ hashPassword,
             if(document){
                 document.password = undefined
                 //res.json(document)
-                res.sendFile(path.join(__dirname + '/login.html'))
+                res.sendFile(path.join(process.cwd() + '/login.html'))
             }else{
                 res.send('document did not save')
             }
