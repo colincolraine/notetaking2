@@ -3,6 +3,7 @@ const UserModel = require('./model')
 const bcrypt = require('bcryptjs')
 const Chance = require('chance')
 const chance = new Chance()
+var path = require('path')
 
 router.post('/login',
     loginInputValidation,
@@ -29,7 +30,8 @@ hashPassword,
         .then((document)=>{
             if(document){
                 document.password = undefined
-                res.json(document)
+                //res.json(document)
+                res.sendFile(path.join(__dirname + '/login.html'))
             }else{
                 res.send('document did not save')
             }
