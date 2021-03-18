@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node register.html"
+    "start": "node index.js"
   },
   "keywords": [
     "express.js",
