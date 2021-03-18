@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script src="colin.js"></script>
-    <script src="index.js"></script>
     <link rel = "stylesheet" href = "style.css">
 </head>
 <body>
@@ -14,97 +13,481 @@
         <div class="container-fluid">
           <div class="navbar-header">
             <a class="navbar-brand" href="#">-->
-              <!--<div style= "position: fixed; top: 5%; bottom: 90%; right: 0%; background-color: rgb(252, 252, 252);">
-                <li><a href="index.html">Home Page</a></li>
-              </div>-->
+              <div style= "position: fixed; top: 5%; bottom: 90%; right: 0%; background-color: rgb(252, 252, 252);">
+                <div style= "display: inline;">
+                  <input type="email" name="txtEmail" placeholder="Email Address" class="utility-bar__login-input">
+                  <input type="password" name="txtPassword" placeholder="Password" class="utility-bar__login-input">
+                  <button type="submit" class="utility-bar__login-button utility-bar__login-button--sign-in">Sign In</button>
+                </div>
+                <li><a href="register.html">Create Account</a></li>
+                <li><a href="../Ogilvie_Jerome/index.html">Contact Us</a></li>
+              </div>
               <div style= "position: fixed; top: 0%; bottom:70%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
                 <div style= "position: fixed; top: 0%; bottom:80%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
                   <img src="Image 09-03-2021 at 13.18.jpeg" alt="Smiley face">
                 </div>
                 <div style= "position: fixed; top: 20%; bottom:50%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
-                    <div class="register">
-                        <div class="premium__account-switcher"><ul class="premium__account-switcher-list"><li class="premium__account-switcher-item"><a href="#noAccount" class="premium__account-switcher-link">I wish to purchase individual classes</a></li><li class="premium__account-switcher-item premium__account-switcher-item--active"><a href="#haveAccount" class="premium__account-switcher-link">I wish to purchase a monthly membership</a></li></ul></div>
-                      
-
-                        <form method="post" action="/users/register">
-                          <h4 class="register__form-title">Account Details</h4>
-                          <label class="register__label register__label--email register__label--margin-right">firstName<input type="text" name="firstName" value="" class="register__input" autocomplete="off"></label>
-                          <br>
-                          <label class="register__label register__label--email">lastName<input type="text" name="lastName" value="" class="register__input" autocomplete="off"></label>
-                          <br>
-                          <label class="register__label register__label--details">email<input type="email" name="email" value="" class="register__input" autocomplete="new-password"></label>
-                          <br>
-                          <label class="register__label register__label--email">password<input type="password" name="password" value="" class="register__input" autocomplete="off"></label>
-                          <br>
-          
-                          <!--<h4 class="register__form-title">Billing Details</h4>
-                          <label class="register__label register__label--title register__label--margin-right">
-                            Title:
-                            <select class="register__select" name="selTitle">
-                              <option value="">-- Select --</option>
-                              <option value="Mr">Mr</option><option value="Mrs">Mrs</option><option value="Miss">Miss</option><option value="Ms">Ms</option>
-                            </select>
-                          </label>
-                          <br>
-                          <label class="register__label register__label--name register__label--margin-right">
-                            First Name:
-                            <input type="text" name="txtFirstName" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--name">
-                            Last Name:
-                            <input type="text" name="txtLastName" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half register__label--margin-right">
-                            Address Line 1:
-                            <input type="text" name="txtAddressLine1" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half">
-                            Address Line 2:
-                            <input type="text" name="txtAddressLine2" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half register__label--margin-right">
-                            Town / City:
-                            <input type="text" name="txtTownCity" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half register__label--margin-right">
-                            Postcode:
-                            <input type="text" name="txtPostcode" value="" class="register__input">
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half">
-                            Country:
-                            <select name="selCountry" class="register__select">
-                              <option value="">--- Select a country ---</option>
-                              <option value="GB" selected="selected">United Kingdom</option><option value="US">United States of America</option><option value="AF">Afghanistan</option><option value="AX">Aland Islands</option><option value="AL">Albania</option><option value="DZ">Algeria</option><option value="AS">American Samoa</option><option value="AD">Andorra</option><option value="AO">Angola</option><option value="AI">Anguilla</option><option value="AQ">Antarctica</option><option value="AG">Antigua and Barbuda</option><option value="AR">Argentina</option><option value="AM">Armenia</option><option value="AW">Aruba</option><option value="AU">Australia</option><option value="AT">Austria</option><option value="AZ">Azerbaijan</option><option value="BS">Bahamas</option><option value="BH">Bahrain</option><option value="BD">Bangladesh</option><option value="BB">Barbados</option><option value="BY">Belarus</option><option value="BE">Belgium</option><option value="BZ">Belize</option><option value="BJ">Benin</option><option value="BM">Bermuda</option><option value="BT">Bhutan</option><option value="BO">Bolivia</option><option value="BA">Bosnia and Herzegovina</option><option value="BW">Botswana</option><option value="BV">Bouvet Island</option><option value="BR">Brazil</option><option value="IO">British Indian Ocean Territory</option><option value="VG">British Virgin Islands</option><option value="BN">Brunei Darussalam</option><option value="BG">Bulgaria</option><option value="BF">Burkina Faso</option><option value="BI">Burundi</option><option value="KH">Cambodia</option><option value="CM">Cameroon</option><option value="CA">Canada</option><option value="CV">Cape Verde</option><option value="KY">Cayman Islands</option><option value="CF">Central African Republic</option><option value="TD">Chad</option><option value="CL">Chile</option><option value="CN">China</option><option value="CX">Christmas Island</option><option value="CC">Cocos (Keeling) Islands</option><option value="CO">Colombia</option><option value="KM">Comoros</option><option value="CG">Congo (Brazzaville)</option><option value="CD">Congo, (Kinshasa)</option><option value="CK">Cook Islands</option><option value="CR">Costa Rica</option><option value="CI">Côte d'Ivoire</option><option value="HR">Croatia</option><option value="CU">Cuba</option><option value="CY">Cyprus</option><option value="CZ">Czech Republic</option><option value="DK">Denmark</option><option value="DJ">Djibouti</option><option value="DM">Dominica</option><option value="DO">Dominican Republic</option><option value="EC">Ecuador</option><option value="EG">Egypt</option><option value="SV">El Salvador</option><option value="GQ">Equatorial Guinea</option><option value="ER">Eritrea</option><option value="EE">Estonia</option><option value="ET">Ethiopia</option><option value="FK">Falkland Islands (Malvinas)</option><option value="FO">Faroe Islands</option><option value="FJ">Fiji</option><option value="FI">Finland</option><option value="FR">France</option><option value="GF">French Guiana</option><option value="PF">French Polynesia</option><option value="TF">French Southern Territories</option><option value="GA">Gabon</option><option value="GM">Gambia</option><option value="GE">Georgia</option><option value="DE">Germany</option><option value="GH">Ghana</option><option value="GI">Gibraltar</option><option value="GR">Greece</option><option value="GL">Greenland</option><option value="GD">Grenada</option><option value="GP">Guadeloupe</option><option value="GU">Guam</option><option value="GT">Guatemala</option><option value="GG">Guernsey</option><option value="GN">Guinea</option><option value="GW">Guinea-Bissau</option><option value="GY">Guyana</option><option value="HT">Haiti</option><option value="HM">Heard and Mcdonald Islands</option><option value="VA">Holy See (Vatican City State)</option><option value="HN">Honduras</option><option value="HK">Hong Kong, SAR China</option><option value="HU">Hungary</option><option value="IS">Iceland</option><option value="IN">India</option><option value="ID">Indonesia</option><option value="IR">Iran, Islamic Republic of</option><option value="IQ">Iraq</option><option value="IE">Ireland</option><option value="IM">Isle of Man</option><option value="IL">Israel</option><option value="IT">Italy</option><option value="JM">Jamaica</option><option value="JP">Japan</option><option value="JE">Jersey</option><option value="JO">Jordan</option><option value="KZ">Kazakhstan</option><option value="KE">Kenya</option><option value="KI">Kiribati</option><option value="KW">Kuwait</option><option value="KG">Kyrgyzstan</option><option value="LA">Lao PDR</option><option value="LV">Latvia</option><option value="LB">Lebanon</option><option value="LS">Lesotho</option><option value="LR">Liberia</option><option value="LY">Libya</option><option value="LI">Liechtenstein</option><option value="LT">Lithuania</option><option value="LU">Luxembourg</option><option value="MO">Macao, SAR China</option><option value="MK">Macedonia, Republic of</option><option value="MG">Madagascar</option><option value="MW">Malawi</option><option value="MY">Malaysia</option><option value="MV">Maldives</option><option value="ML">Mali</option><option value="MT">Malta</option><option value="MH">Marshall Islands</option><option value="MQ">Martinique</option><option value="MR">Mauritania</option><option value="MU">Mauritius</option><option value="YT">Mayotte</option><option value="MX">Mexico</option><option value="FM">Micronesia, Federated States of</option><option value="MD">Moldova</option><option value="MC">Monaco</option><option value="MN">Mongolia</option><option value="ME">Montenegro</option><option value="MS">Montserrat</option><option value="MA">Morocco</option><option value="MZ">Mozambique</option><option value="MM">Myanmar</option><option value="NA">Namibia</option><option value="NR">Nauru</option><option value="NP">Nepal</option><option value="NL">Netherlands</option><option value="AN">Netherlands Antilles</option><option value="NC">New Caledonia</option><option value="NZ">New Zealand</option><option value="NI">Nicaragua</option><option value="NE">Niger</option><option value="NG">Nigeria</option><option value="NU">Niue</option><option value="NF">Norfolk Island</option><option value="KP">North Korea</option><option value="MP">Northern Mariana Islands</option><option value="NO">Norway</option><option value="OM">Oman</option><option value="PK">Pakistan</option><option value="PW">Palau</option><option value="PS">Palestinian Territory</option><option value="PA">Panama</option><option value="PG">Papua New Guinea</option><option value="PY">Paraguay</option><option value="PE">Peru</option><option value="PH">Philippines</option><option value="PN">Pitcairn</option><option value="PL">Poland</option><option value="PT">Portugal</option><option value="PR">Puerto Rico</option><option value="QA">Qatar</option><option value="RE">Réunion</option><option value="RO">Romania</option><option value="RU">Russian Federation</option><option value="RW">Rwanda</option><option value="SH">Saint Helena</option><option value="KN">Saint Kitts and Nevis</option><option value="LC">Saint Lucia</option><option value="PM">Saint Pierre and Miquelon</option><option value="VC">Saint Vincent and Grenadines</option><option value="BL">Saint-Barthélemy</option><option value="MF">Saint-Martin (French part)</option><option value="WS">Samoa</option><option value="SM">San Marino</option><option value="ST">Sao Tome and Principe</option><option value="SA">Saudi Arabia</option><option value="SN">Senegal</option><option value="RS">Serbia</option><option value="SC">Seychelles</option><option value="SL">Sierra Leone</option><option value="SG">Singapore</option><option value="SK">Slovakia</option><option value="SI">Slovenia</option><option value="SB">Solomon Islands</option><option value="SO">Somalia</option><option value="ZA">South Africa</option><option value="GS">South Georgia and the South Sandwich Islands</option><option value="KR">South Korea</option><option value="SS">South Sudan</option><option value="ES">Spain</option><option value="LK">Sri Lanka</option><option value="SD">Sudan</option><option value="SR">Suriname</option><option value="SJ">Svalbard and Jan Mayen Islands</option><option value="SZ">Swaziland</option><option value="SE">Sweden</option><option value="CH">Switzerland</option><option value="SY">Syrian Arab Republic (Syria)</option><option value="TW">Taiwan, Republic of China</option><option value="TJ">Tajikistan</option><option value="TZ">Tanzania, United Republic of</option><option value="TH">Thailand</option><option value="TL">Timor-Leste</option><option value="TG">Togo</option><option value="TK">Tokelau</option><option value="TO">Tonga</option><option value="TT">Trinidad and Tobago</option><option value="TN">Tunisia</option><option value="TR">Turkey</option><option value="TM">Turkmenistan</option><option value="TC">Turks and Caicos Islands</option><option value="TV">Tuvalu</option><option value="UG">Uganda</option><option value="UA">Ukraine</option><option value="AE">United Arab Emirates</option><option value="UY">Uruguay</option><option value="UM">US Minor Outlying Islands</option><option value="UZ">Uzbekistan</option><option value="VU">Vanuatu</option><option value="VE">Venezuela (Bolivarian Republic)</option><option value="VN">Viet Nam</option><option value="VI">Virgin Islands, US</option><option value="WF">Wallis and Futuna Islands</option><option value="EH">Western Sahara</option><option value="YE">Yemen</option><option value="ZM">Zambia</option><option value="ZW">Zimbabwe</option>
-                            </select>
-                          </label>
-                          <br>
-                          <label class="register__label register__label--half register__label--margin-right">
-                            Telephone Number:
-                            <input type="text" name="txtPhone" value="" class="register__input">
-                          </label>
-          
-                          <h4 class="register__form-title">Payment Details</h4>-->
-          
-                          <!--<<div class="register__worldpay" id="paymentSection"><div id="token_container"><div id="token_container_holder" style="visibility: visible; opacity: 1; display: inline-block;"><iframe id="_iframe_holder" scrolling="no" style="position: relative; top: 0px; background-color: rgb(255, 255, 255); border: none; width: 356px; height: 334px;" marginheight="0" marginwidth="0" frameborder="0"></iframe></div></div></div>
-                          <div id="card-accepted" class="alert alert--success" style=" display:none;"><ul class="alert__list"><li class="alert__list-item">Your card details have been accepted by and stored with Worldpay.</li></ul></div>-->
-          
-                          <input type="submit" class="register__button" data-sitekey="6Le99S8UAAAAAKWAhpw2P0j2aYbSWECFr0dAz0rM" data-callback="onSubmit" value="Create Account">
-                          
-                            </form>
-                        
-                      </div>
-
+                  <ul>
+                    <h2>4 simple steps</h2>
+                    <li>Sign In or Create Account</li>
+                    <li>Select Classes from table below</li>
+                    <li>Go to Checkout</li>
+                    <li>Receive confirmation email with link to Online Tuition</li>
+                  </ul>
                 </div>
               </div>
             <!--</a>
           </div>
         </div>
     </nav>-->
+<div style= "position: fixed; top: 35%; bottom:10%; background-color: rgb(255, 255, 255);">
+<a href='#boxChild'><h2>This week's group classes</h2></a>
+<div class='box'>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foo"><p>Monday 1st</p></div>
+      <div class = "foo"><p>Tuesday 2nd</p></div>
+      <div class = "foo"><p>Wednesday 3rd</p></div>
+      <div class = "foo"><p>Thursday 4th</p></div>
+      <div class = "foo"><p>Friday 5th</p></div>
+      <div class = "foo"><p>Saturday 6th</p></div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"><p></p>4pm</div>
+        <div class= "fool"><p>4.40pm</p></div>
+        <div class= "fool"><p>5.20pm</p></div>
+        <div class= "fool"><p>6pm</p></div>
+        <div class= "fool"><p>6.40pm</p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p>4pm</div>
+        <div class= "fool"><p>4.40pm</p></div>
+        <div class= "fool"><p>5.20pm</p></div>
+        <div class= "fool"><p>6pm</p></div>
+        <div class= "fool"><p>6.40pm</p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p>4pm</div>
+        <div class= "fool"><p>4.40pm</p></div>
+        <div class= "fool"><p>5.20pm</p></div>
+        <div class= "fool"><p>6pm</p></div>
+        <div class= "fool"><p>6.40pm</p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p>4pm</div>
+        <div class= "fool"><p>4.40pm</p></div>
+        <div class= "fool"><p>5.20pm</p></div>
+        <div class= "fool"><p>6pm</p></div>
+        <div class= "fool"><p>6.40pm</p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p>4pm</div>
+        <div class= "fool"><p>4.40pm</p></div>
+        <div class= "fool"><p>5.20pm</p></div>
+        <div class= "fool"><p>6pm</p></div>
+        <div class= "fool"><p>6.40pm</p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p>7.30am</div>
+        <div class= "fool"><p>8.10am</p></div>
+        <div class= "fool"><p>8.50am</p></div>
+        <div class= "fool"><p>9.30am</p></div>
+        <div class= "fool"><p>10.10am</p></div>
+      </div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"></div>
+        <div class= "fool"><button onclick="myFunction1()">Estimation and rounding</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction2()">Grammar</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction3()">Estimation and rounding</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction4()">Grammar</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction5()">Estimation and rounding</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction6()">Grammar</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction7()">Number processes</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction8()">Writing</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction9()">Number processes</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction10()">Writing</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction11()">Number processes</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction12()">Writing</button></div>
+        <div class= "fool"><p></p></div>
+      </div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction13()">Money</button></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction14()">Speaking</button></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction15()">Money</button></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction16()">Speaking</button></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction17()">Money</button></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction18()">Speaking</button></div>
+      </div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction19()">Power and roots</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction20()">Reading</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction21()">Power and roots</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction22()">Reading</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction23()">Power and roots</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><button onclick="myFunction24()">Reading</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+  </div>
+  </div>
+  <div id='boxChild'>
+    <div style="width: 100%; background: aqua; display:inline-flex; text-align: center;">
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction25()">Fractions, decimals, percentages</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction26()">Spelling</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction27()">Fractions, decimals, percentages</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction28()">Spelling</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction29()">Fractions, decimals, percentages</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+      <div class = "foop">
+        <div class= "fool"><button onclick="myFunction30()">Spelling</button></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+        <div class= "fool"><p></p></div>
+      </div>
+  </div>
+  </div>
+</div>
+<div style= "background-color: aqua; border: 1px solid rgba(0, 0, 0, .2); width: 50%;">
+  <p id="demo1"></p>
+  <p id="demo2"></p>
+  <p id="demo3"></p>
+  <p id="demo4"></p>
+  <p id="demo5"></p>
+  <p id="demo6"></p>
+  <p id="demo7"></p>
+  <p id="demo8"></p>
+  <p id="demo9"></p>
+  <p id="demo10"></p>
+  <p id="demo11"></p>
+  <p id="demo12"></p>
+  <p id="demo13"></p>
+  <p id="demo14"></p>
+  <p id="demo15"></p>
+  <p id="demo16"></p>
+  <p id="demo17"></p>
+  <p id="demo18"></p>
+  <p id="demo19"></p>
+  <p id="demo20"></p>
+  <p id="demo21"></p>
+  <p id="demo22"></p>
+  <p id="demo23"></p>
+  <p id="demo24"></p>
+  <p id="demo25"></p>
+  <p id="demo26"></p>
+  <p id="demo27"></p>
+  <p id="demo28"></p>
+  <p id="demo29"></p>
+  <p id="demo30"></p>
+</div>
+
+<!-- <div style= "border: 1px solid rgba(0, 0, 0, .2); width: 5%; margin-left: 45%; text-align: center;"><button style= "height: 40px";><p id="checkout"></p></button></div> -->
+<button style= "height: 40px; margin-left: 45%;"><p id="checkout"></p></button>
+
+<script>
+function myFunction1() {
+  document.getElementById("demo1").innerHTML = "Estimation and rounding";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction2() {
+  document.getElementById("demo2").innerHTML = "Grammar";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction3() {
+  document.getElementById("demo3").innerHTML = "Estimation and rounding";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction4() {
+  document.getElementById("demo4").innerHTML = "Grammar";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction5() {
+  document.getElementById("demo5").innerHTML = "Estimation and rounding";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction6() {
+  document.getElementById("demo6").innerHTML = "Grammar";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction7() {
+  document.getElementById("demo7").innerHTML = "Number processes";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction8() {
+  document.getElementById("demo8").innerHTML = "Writing";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction9() {
+  document.getElementById("demo9").innerHTML = "Number processes";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction10() {
+  document.getElementById("demo10").innerHTML = "Writing";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction11() {
+  document.getElementById("demo11").innerHTML = "Number processes";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction12() {
+  document.getElementById("demo12").innerHTML = "Writing";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction13() {
+  document.getElementById("demo13").innerHTML = "Money";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction14() {
+  document.getElementById("demo14").innerHTML = "Speaking";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction15() {
+  document.getElementById("demo15").innerHTML = "Money";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction16() {
+  document.getElementById("demo16").innerHTML = "Speaking";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction17() {
+  document.getElementById("demo17").innerHTML = "Money";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction18() {
+  document.getElementById("demo18").innerHTML = "Speaking";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction19() {
+  document.getElementById("demo19").innerHTML = "Power and roots";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction20() {
+  document.getElementById("demo20").innerHTML = "Reading";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction21() {
+  document.getElementById("demo21").innerHTML = "Power and roots";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction22() {
+  document.getElementById("demo22").innerHTML = "Reading";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction23() {
+  document.getElementById("demo23").innerHTML = "Power and roots";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction24() {
+  document.getElementById("demo24").innerHTML = "Reading";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction25() {
+  document.getElementById("demo25").innerHTML = "Fractions, decimals, percentages";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction26() {
+  document.getElementById("demo26").innerHTML = "Spelling";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction27() {
+  document.getElementById("demo27").innerHTML = "Fractions, decimals, percentages";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction28() {
+  document.getElementById("demo28").innerHTML = "Spelling";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction29() {
+  document.getElementById("demo29").innerHTML = "Fractions, decimals, percentages";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+function myFunction30() {
+  document.getElementById("demo30").innerHTML = "Spelling";
+  document.getElementById("checkout").innerHTML = "Checkout";
+}
+</script>
+</div>
 </body>
 </html>
