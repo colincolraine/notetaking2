@@ -2,6 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const app = express()
+var path = require('path')
 
 const PORT = process.env.PORT || 4000
 
@@ -17,6 +18,11 @@ mongoose.connect(`mongodb+srv://${username}:${password}@notetaking2.7q2bv.mongod
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+
+app.use(express.static(path.join(__dirname)))
+app.get('/', function(req, res) {
+    res.sendFile(path.join(__dirname + 'register.html'))
+})
 
 app.use('/notes', noteRoutes)
 app.use('/users', userRoutes)
