@@ -24,11 +24,13 @@
                 <div style= "position: fixed; top: 20%; bottom:50%; left:30%; right: 30%; background-color: rgb(255, 255, 255);">
                     <div class="register">
                       <!--<div style= "position: fixed; top: 5%; bottom: 90%; right: 0%; background-color: rgb(252, 252, 252);">-->
-                        <div style= "display: inline;">
-                          <input type="email" name="txtEmail" placeholder="Email Address" class="utility-bar__login-input">
-                          <input type="password" name="txtPassword" placeholder="Password" class="utility-bar__login-input">
-                          <button type="submit" class="utility-bar__login-button utility-bar__login-button--sign-in">Sign In</button>
-                        </div>
+                        <form method="post" action=""/users/login"">
+                          <div style= "display: inline;">
+                            <input type="email" name="txtEmail" placeholder="Email Address" class="utility-bar__login-input">
+                            <input type="password" name="txtPassword" placeholder="Password" class="utility-bar__login-input">
+                            <button type="submit" class="utility-bar__login-button utility-bar__login-button--sign-in">Sign In</button>
+                          </div>
+                        </form>
                     <!--</div>-->
                     </div>     
                 </div>
