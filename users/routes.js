@@ -183,7 +183,7 @@ function giveAccess(req, res, next){
         .then((result)=>{
             if(result){
                 //res.send(accessToken)
-                res.sendFile(path.join(process.cwd()))
+                res.sendFile(process.cwd())
             }else{
                 res
                     .staus(400)
