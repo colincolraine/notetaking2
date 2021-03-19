@@ -185,7 +185,7 @@ function giveAccess(req, res, next){
                 //res.send(accessToken)
                 //res.sendFile(path.join(__dirname + '/6053a783b5ea260015d74bcf'))
                 //window.location.href = "https://ogilviejerome.herokuapp.com/users/6053a783b5ea260015d74bcf"
-                res.redirect('/6053a783b5ea260015d74bcf')
+                res.redirect('/users/6053a783b5ea260015d74bcf')
             }else{
                 res
                     .staus(400)
