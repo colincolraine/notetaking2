@@ -9,8 +9,15 @@ router.post('/login',
     loginInputValidation,
     findUser,
     checkPassword,
-    giveAccess
-)
+    giveAccess,
+    (req, res, next)=>{
+        console.log(req.body.password)
+        const newUser = new UserModel({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            password: req.body.password
+        })
 
 router.post('/register',
 registerinputValidation,
