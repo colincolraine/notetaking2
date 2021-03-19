@@ -119,7 +119,7 @@ function hashPassword(req, res,next){
 }
 
 function loginInputValidation(req, res, next){
-    const{firstName,lastName, email, password} = req.body
+    const{email, password} = req.body
     const missingFields = []
 
     if(!email){
