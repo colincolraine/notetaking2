@@ -187,10 +187,11 @@ function giveAccess(req, res, next){
                 //window.location.href = "https://ogilviejerome.herokuapp.com/users/6053a783b5ea260015d74bcf"
                 //res.redirect('/users/6053a783b5ea260015d74bcf')
                 //res.redirect('/users/' + req.params['id'])
-                var UserId = objectToInsert._id
+                //var UserId = objectToInsert._id
                 //res.redirect('/users/' + attr[_id])
                 //res.redirect(__dirname)
-                res.redirect('/users/' + UserId)
+                //res.redirect('/users/' + UserId)
+                res.send(_id)
             }else{
                 res
                     .staus(400)
