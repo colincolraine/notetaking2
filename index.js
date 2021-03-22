@@ -18,6 +18,7 @@ mongoose.connect(`mongodb+srv://${username}:${password}@notetaking2.7q2bv.mongod
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: true}))
+app.set('view engine', 'ejs')
 
 app.use(express.static(path.join(__dirname)))
 app.get('/', function(req, res) {
