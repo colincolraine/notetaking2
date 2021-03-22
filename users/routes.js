@@ -191,7 +191,7 @@ function giveAccess(req, res, next){
                 //res.redirect('/users/' + attr[_id])
                 //res.redirect(__dirname)
                 //res.redirect('/users/' + UserId)
-                res.send(_id)
+                res.redirect('/dashboard')
             }else{
                 res
                     .staus(400)
