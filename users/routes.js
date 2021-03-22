@@ -8,10 +8,11 @@ var path = require('path')
 
 router.get('/dashboard', (req, res) => {
     //res.render(path.join(__dirname, 'dashboard.html'))
-    //res.sendFile(path.join(process.cwd() + '/dashboard.html'))req.user.firstName}
+    //res.sendFile(path.join(process.cwd() + '/dashboard.html'))
     //res.render('dashboard')
-    var middleName = "Colin"
-    res.render('dashboard', {middleName: middleName})
+    //var middleName = "Colin"
+    //res.render('dashboard', {middleName: middleName})
+    res.render('dashboard', {firstName: req.user.firstName})
 })
 
 router.post('/login',
