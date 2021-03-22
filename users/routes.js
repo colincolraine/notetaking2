@@ -8,9 +8,9 @@ var path = require('path')
 
 router.get('/dashboard', (req, res) => {
     //res.render(path.join(__dirname, 'dashboard.html'))
-    //res.sendFile(path.join(process.cwd() + '/dashboard.html'))
+    //res.sendFile(path.join(process.cwd() + '/dashboard.html'))user.get("email")
     //res.render('dashboard')
-    res.render('dashboard', {email: user.get("email")})
+    res.render('dashboard', {email: "john@gmail.com"})
 })
 
 router.post('/login',
@@ -201,8 +201,8 @@ function giveAccess(req, res, next){
                 //res.redirect('/users/' + UserId)
 
                 //res.redirect('/users/dashboard')
-                //res.redirect('/users/dashboard?email='+email)
-                res.redirect('/users/dashboard')
+                res.redirect('/users/dashboard?email='+email)
+                //res.redirect('/users/dashboard')
             }else{
                 res
                     .staus(400)
