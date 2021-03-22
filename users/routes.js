@@ -5,6 +5,12 @@ const Chance = require('chance')
 const chance = new Chance()
 var path = require('path')
 
+
+router.get('/dashboard', (req, res) => {
+    //res.render(path.join(__dirname, 'dashboard.html'))
+    res.sendFile(path.join(process.cwd() + '/dashboard.html'))
+})
+
 router.post('/login',
     loginInputValidation,
     findUser,
@@ -191,7 +197,7 @@ function giveAccess(req, res, next){
                 //res.redirect('/users/' + attr[_id])
                 //res.redirect(__dirname)
                 //res.redirect('/users/' + UserId)
-                res.redirect('/dashboard')
+                res.redirect('/users/dashboard')
             }else{
                 res
                     .staus(400)
