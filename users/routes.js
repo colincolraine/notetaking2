@@ -200,7 +200,8 @@ function giveAccess(req, res, next){
                 //res.redirect('/users/' + UserId)
 
                 //res.redirect('/users/dashboard')
-                res.redirect('/users/dashboard?email='+email)
+                //res.redirect('/users/dashboard?email='+email)
+                res.redirect('/users/dashboard')
             }else{
                 res
                     .staus(400)
