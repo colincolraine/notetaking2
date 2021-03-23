@@ -12,7 +12,7 @@ router.get('/dashboard', (req, res) => {
     //res.render('dashboard')
     //var middleName = "Colin"
     //res.render('dashboard', {middleName: middleName})
-    res.render('dashboard', {firstName: req.user.firstName})
+    res.render('dashboard', {firstName: req.body.firstName})
 })
 
 router.post('/login',
