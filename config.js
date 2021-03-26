@@ -6,8 +6,6 @@ const BearerStrategy = require('passport-http-bearer')
 const LocalStrategy = require('passport-local').Strategy
 const UserModel = require('./users/model')
 
-module.exports = function(passport) {
-
 passport.serializeUser(function(foundUser, done) {
     done(null, foundUser.id)
 })
@@ -90,6 +88,4 @@ passport.use(new BearerStrategy(
     }
   ))
 
-//  module.exports = passport
-
-}
+  module.exports = passport
