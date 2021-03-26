@@ -1,9 +1,8 @@
-//const passport = require('passport')
-//const BearerStrategy = require('passport-http-bearer')
-//const UserModel = require('./users/model')
+const passport = require('passport')
+const BearerStrategy = require('passport-http-bearer')
 
 //start new session stuff
-const passport = require('passport')
+//const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const UserModel = require('./users/model')
 
@@ -72,23 +71,25 @@ function(req, email, password, done) {
 }))
 
 
-}
+
 //end new session stuff
 
-//passport.use(new BearerStrategy(
-//    function(accessToken, done) {
-//        UserModel.findOne({ accessToken })
-//            .then((foundUser)=>{
-//                if(foundUser){
-//                    return done(null, foundUser)
-//                }else{
-//                    return done(null, false)
-//                }
-//            })
-//            .catch((err)=>{
-//                done(err)
-//            })
-//    }
-//  ))
+passport.use(new BearerStrategy(
+    function(accessToken, done) {
+        UserModel.findOne({ accessToken })
+            .then((foundUser)=>{
+                if(foundUser){
+                    return done(null, foundUser)
+                }else{
+                    return done(null, false)
+                }
+            })
+            .catch((err)=>{
+                done(err)
+            })
+    }
+  ))
 
 //  module.exports = passport
+
+}

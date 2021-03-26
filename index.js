@@ -2,7 +2,7 @@ const express = require('express')
 const bodyParser = require('body-parser')
 //start new session stuff
 const session = require('express-session')
-const store = new session.MemoryStore()
+//const store = new session.MemoryStore()
 //end new session stuff
 const mongoose = require('mongoose')
 const app = express()
@@ -22,11 +22,12 @@ mongoose.connect(`mongodb+srv://${username}:${password}@notetaking2.7q2bv.mongod
 
 //start new session stuff
 app.use(session({
-    secret: 'some secret',
-    cookie: {maxAge: 30000},
-    saveUninitialized: false,
-    store
+    secret: 'some secret'
+    //cookie: {maxAge: 30000},
+    //saveUninitialized: false,
+    //store
 }))
+app.use(passport.initialize())
 app.use(passport.session())
 //end new session stuff
 
