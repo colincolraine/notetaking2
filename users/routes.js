@@ -12,15 +12,41 @@ router.get('/dashboard', (req, res) => {
     //res.render('dashboard')
     //var middleName = "Colin"
     //res.render('dashboard', {middleName: middleName})
-    res.render('dashboard', {firstName: req.body.firstName})
+    //res.render('dashboard', {firstName: req.body.firstName})
+    res.render('dashboard')
 })
 
 router.post('/login',
-    loginInputValidation,
-    findUser,
-    checkPassword,
-    giveAccess
-)
+    passport.authenticate('local-login'),
+    (req, res) => {
+    res.redirect('/users/dashboard')
+    }
+    //loginInputValidation,
+    //findUser,
+    //checkPassword,
+    //giveAccess
+
+    //start new session stuff
+    //(req, res) => {
+    //    const {email, password} = req.body
+    //    if(email && password) {
+    //        if(req.session.authenticated) {
+    //            res.json(req.session)
+    //        } else {
+    //            if (password === '123') {
+    //                res.session.authenticated = true
+    //                req.session.user = {
+    //                    email, password
+    //                }
+    //                res.json(req.session)
+    //            } else { 
+    //                res.status(403).json({msg: 'Bad Credentials'})
+    //            }
+    //        }
+    //    } else res.status(403).json({msg: 'Bad Credentials'})
+    //}
+    //end new session stuff
+    )
 
 
 router.post('/register',
